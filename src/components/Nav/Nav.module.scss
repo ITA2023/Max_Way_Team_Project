@@ -1,0 +1,18 @@
+.Nav{
+    display: fixed;
+    display: sticky;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    .Links{
+        width: 550px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+    }
+    .Functional{
+        .LocationDot{
+            width: 32px;
+        }
+    }
+}
