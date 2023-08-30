@@ -1,11 +1,12 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from '../pages/Home/Home';
-import Filials from '../pages/Filials/Filials';
-import About from '../pages/About/About';
-import Contact from '../pages/Contact/Contact';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
+import Filials from '../Pages/Filials/Filials';
+import FilialsCard from '../components/Cards_Filials/FilialsCard';
+import Home from '../Pages/Home/Home.jsx';
+import { Route, Routes } from 'react-router-dom';
+import About from '../Pages/About/About';
+import Contact from '../Pages/Contact/Contact';
 
 export const Paths = [
     {
@@ -26,7 +27,12 @@ export const Paths = [
     {
         id: 4,
         path: "/Contact",
-        el: <Contact/>
+        el: <Contact />
+    },
+    {
+        id: 5,
+        path: "/FilialsCard",
+        el: <FilialsCard />
     }
 ]
 
