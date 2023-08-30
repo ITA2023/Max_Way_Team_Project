@@ -1,12 +1,12 @@
 import React from 'react';
 import Nav from '../components/Nav/Nav';
 import Footer from '../components/Footer/Footer';
-import Filials from '../Pages/Filials/Filials';
-import FilialsCard from '../Pages/Cards_Filials/FilialsCard';
-import Home from '../Pages/Home/Home.jsx';
 import { Route, Routes } from 'react-router-dom';
-import About from '../Pages/About/About';
+import Home from '../Pages/Home/Home';
+import Filials from '../Pages/Filials/Filials';
 import Contact from '../Pages/Contact/Contact';
+import FilialsCard from '../Pages/Cards_Filials/FilialsCard';
+import About from '../Pages/About/About';
 
 export const Paths = [
     {

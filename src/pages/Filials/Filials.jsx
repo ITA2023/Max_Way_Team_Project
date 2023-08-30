@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Filials.css";
-import axios from 'axios'
+import axios from "axios"
 import { Link } from 'react-router-dom'
-
-
-
 
 const Filials = () => {
 
