@@ -1,5 +1,5 @@
 import React from "react";
-import "./FilialsCard.module.scss";
+import "./FilialsCard.scss";
 import { Link } from "react-router-dom";
 
 const FilialsCard = () => {
