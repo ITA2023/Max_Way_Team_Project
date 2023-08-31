@@ -21,8 +21,8 @@ console.log();
               <button className="filials_title_button">Ro'yxat</button>
             </Link>
 
-            <Link to={"/Filialscarta"}>
-              <button className="filials_title_button">Xarita</button>
+            <Link to={"/Filialscard"}>
+              <button className="filials_title_button1">Xarita</button>
             </Link>
           </div>
         </div>

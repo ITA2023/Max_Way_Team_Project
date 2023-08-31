@@ -50,7 +50,7 @@
     font-size: 19px;
 }
 
-.filials_title_button {
+.filials_title_button1{
     background-color: #f1eff4;
     width: 160px;
     border: none;
@@ -61,18 +61,6 @@
     transition: .4s;
 }
 
-.filials_title_button:active {
-    background-color: #51267d;
-    color: #fff;
-    transform: scale(.90);
-    transition: .1s;
-}
-
-.filials_title_but {
-    display: flex;
-    gap: 20px;
-}
-
 .fillasls_title {
     display: flex;
     justify-content: space-between;
@@ -81,11 +69,6 @@
 
 }
 
-.container {
-    width: 1400px;
-    margin: 0 auto;
-
-}
 
 .fillalscarta {
     margin-top: 50px;

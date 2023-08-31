@@ -7,6 +7,10 @@ import Filials from '../Pages/Filials/Filials';
 import Contact from '../Pages/Contact/Contact';
 import FilialsCard from '../Pages/Cards_Filials/FilialsCard';
 import About from '../Pages/About/About';
+import Page404 from '../Pages/404Page/404';
+import SProduct from '../Pages/SProduct/SProduct';
+import Cart from '../Pages/Cart/Cart';
+import Style from "./Paths.module.scss";
 
 export const Paths = [
     {
@@ -33,25 +37,42 @@ export const Paths = [
         id: 5,
         path: "/FilialsCard",
         el: <FilialsCard />
+    },
+    {
+        id: 6,
+        path: "*",
+        el: <Page404 />
+    },
+    {
+        id: 7,
+        path: "/single-product/:productId/",
+        element: <SProduct />
+    },
+    {
+        id: 8,
+        path: "/cart",
+        el: <Cart />
     }
 ]
 
 const Index = () => {
-  return (
-    <React.Fragment>
-        <Nav />
-        {
-            Paths.map((path)=>{
-                return(
-                    <Routes key={path.id}>
-                        <Route path={path.path} element={path.el} />
-                    </Routes>
-                )
-            })
-        }
-        <Footer />
-    </React.Fragment>
-  )
+    return (
+        <React.Fragment>
+            <Nav />
+            <div className={Style.Routes}>
+                <Routes>
+                    {
+                        Paths.map((path) => {
+                            return (
+                                <Route key={path.id} path={path.path} element={path.el} />
+                            )
+                        })
+                    }
+                </Routes>
+            </div>
+            <Footer />
+        </React.Fragment>
+    )
 }
 
 export default Index;

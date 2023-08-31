@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Style from "./Home.module.scss";
+import Cards from '../../components/Cards/Container/Cards';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className={Style.Home}>
+      <Cards />
+    </div>
   )
 }
 
