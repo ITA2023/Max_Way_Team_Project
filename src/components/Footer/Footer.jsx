@@ -21,7 +21,7 @@ const Footer = () => {
           <div className={Style.Links}>
             <BsInstagram size={25} fill='gray' />
             <BsFacebook size={25} fill='gray' />
-            <AiFillYoutube size={25} fill='gray' style={{marginBottom : "4px"}} />
+            <AiFillYoutube size={28} fill='gray' />
           </div>
         </div>
       </div>

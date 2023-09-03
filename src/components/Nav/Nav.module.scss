@@ -15,14 +15,14 @@
       height: 90px;
       display: flex;
       align-items: center;
-      .link {
+      a {
         font-weight: 500;
         margin-left: 20px;
-        &.active {
+      }
+      .active {
           font-weight: 700;
           color: blue;
         }
-      }
     }
     .Right {
       display: flex;
@@ -63,7 +63,10 @@
         background-color: #f1eff4;
       }
       .CartTotal {
-        width: 60px;
+        font-size: 15px;
+        width: 85px;
+        display: flex;
+        align-items: center;
       }
       .User {
         width: 35px;

@@ -2,7 +2,6 @@ import axios from 'axios';
 import Style from "./Shaurma.module.scss";
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useCart } from 'react-use-cart';
 
 const Shaurma = () => {
   const Api = "http://localhost:9000";
@@ -11,9 +10,7 @@ const Shaurma = () => {
     await axios.get(Api + `/products`)
       .then(response =>
         setProducts(response.data))
-      .catch(console.error("error"))
   }
-  const { addItem } = useCart()
   useEffect(() => {
     GetApiFunc()
   }, [])
@@ -28,9 +25,9 @@ const Shaurma = () => {
                 <h2 className={Style.Title}> {product.title} </h2>
                 <p className={Style.Desc}> {product.description} </p>
                 <div className={Style.Bottom}>
-                  <h1 className={Style.Price}> {product.price} <span>so'm</span></h1>
+                  <h1 className={Style.Price}> {product.price.toLocaleString()} <span>so'm</span></h1>
                   <Link to={`/single-product/${product.id}`}>
-                    <button className={Style.Add} onClick={() => addItem(product)}>Qo'shish </button>
+                    <button className={Style.Add}>Qo'shish </button>
                   </Link>
                 </div>
               </div>

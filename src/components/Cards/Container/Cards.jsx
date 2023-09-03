@@ -17,31 +17,31 @@ import Tamadilar from '../Tamaddilar/Tamadilar';
 const Cards = () => {
     return (
         <div className={Style.Cards_Conainer}>
-            <h1>🍟🍔🥤Maxi BOX</h1>
+            <h1 id='MaxiBox'>🍟🍔🥤Maxi BOX</h1>
             <MaxiBox />
-            <h1>🥪Klab-Sendvich</h1>
+            <h1 id='Klab'>🥪Klab-Sendvich</h1>
             <Klab />
-            <h1>🌯Lavash</h1>
+            <h1 id='Lavash'>🌯Lavash</h1>
             <Lavash />
-            <h1>🌮Shaurma</h1>
+            <h1 id='Shaurma'>🌮Shaurma</h1>
             <Shaurma />
-            <h1>🍱Donar Kebab</h1>
+            <h1 id='Donar'>🍱Donar Kebab</h1>
             <Donar />
-            <h1>🫔Panini</h1>
+            <h1 id='Panini'>🫔Panini</h1>
             <Panini />
-            <h1>🍔Burger</h1>
+            <h1 id='Burger'>🍔Burger</h1>
             <Burger />
-            <h1>🌭Hot-Dog</h1>
+            <h1 id='HotDog'>🌭Hot-Dog</h1>
             <HotDog />
-            <h1>🍟Gazaklar</h1>
+            <h1 id='Gazaklar'>🍟Gazaklar</h1>
             <Gazaklar />
-            <h1>🥤Ichimliklar</h1>
+            <h1 id='Ichimlik'>🥤Ichimliklar</h1>
             <Ichimliklar />
-            <h1>🍰Desertlar</h1>
+            <h1 id='Desertlar'>🍰Desertlar</h1>
             <Desertlar />
-            <h1>🥫Souslar</h1>
+            <h1 id='Souslar'>🥫Souslar</h1>
             <Souslar />
-            <h1>🍚Tamaddilar</h1>
+            <h1 id='Tamaddilar'>🍚Tamaddilar</h1>
             <Tamadilar />
         </div>
     )

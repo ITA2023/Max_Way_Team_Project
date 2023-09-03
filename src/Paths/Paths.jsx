@@ -5,12 +5,12 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../Pages/Home/Home';
 import Filials from '../Pages/Filials/Filials';
 import Contact from '../Pages/Contact/Contact';
-import FilialsCard from '../Pages/Cards_Filials/FilialsCard';
 import About from '../Pages/About/About';
 import Page404 from '../Pages/404Page/404';
-import SProduct from '../Pages/SProduct/SProduct';
 import Cart from '../Pages/Cart/Cart';
 import Style from "./Paths.module.scss";
+import Map from '../Pages/Map/Map';
+import SProduct from '../Pages/SProduct/SProduct';
 
 export const Paths = [
     {
@@ -35,8 +35,8 @@ export const Paths = [
     },
     {
         id: 5,
-        path: "/FilialsCard",
-        el: <FilialsCard />
+        path: "/Map",
+        el: <Map />
     },
     {
         id: 6,
@@ -46,14 +46,14 @@ export const Paths = [
     {
         id: 7,
         path: "/single-product/:productId/",
-        element: <SProduct />
+        el: <SProduct />
     },
     {
         id: 8,
         path: "/cart",
         el: <Cart />
     }
-]
+];
 
 const Index = () => {
     return (
@@ -61,18 +61,14 @@ const Index = () => {
             <Nav />
             <div className={Style.Routes}>
                 <Routes>
-                    {
-                        Paths.map((path) => {
-                            return (
-                                <Route key={path.id} path={path.path} element={path.el} />
-                            )
-                        })
-                    }
+                    {Paths.map((path) => {
+                        return <Route key={path.id} path={path.path} element={path.el} />;
+                    })}
                 </Routes>
             </div>
             <Footer />
         </React.Fragment>
-    )
-}
+    );
+};
 
 export default Index;

@@ -1,0 +1,24 @@
+@keyframes HeaderAnim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.Swiper{
+    display: flex;
+    .SwiperSlide{
+        width: 166px;
+        height: 45px;
+        font-size: 1rem;
+        border-radius: 0.75rem;
+        text-transform: capitalize;
+        transition: .15s ease;
+        &:hover{
+            animation: HeaderAnim .4s ease forwards;
+        transition: .15s ease;
+        text-transform: capitalize;
+        }
+    }
+}
