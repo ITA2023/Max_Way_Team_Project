@@ -1,27 +1,62 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import Style from "./Header.module.scss";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { NavLink } from 'react-router-dom';
 
 const Header = () => {
+    const [activeSlide, setActiveSlide] = useState(0);
+
+    const handleSlideChange = (swiper) => {
+        setActiveSlide(swiper.activeIndex);
+    };
+
     return (
-        <Swiper className={Style.Swiper}
-            slidesPerView={7}>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#MaxiBox">🍟🍔🥤Maxi BOX</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Klab">🥪Klab-Sendvich</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Lavash">🌯Lavash</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Shaurma">🌮Shaurma</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Donar">🍱Donar Kebab</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Panini">🫔Panini</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Burger">🍔Burger</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#HotDog">🌭Hot-Dog</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Gazaklar">🍟Gazaklar</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Ichimlik">🥤Ichimliklar</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Desertlar">🍰Desertlar</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Souslar">🥫Souslar</NavLink></SwiperSlide>
-            <SwiperSlide className={Style.SwiperSlide}><NavLink to="#Tamaddilar">🍚Tamaddilar</NavLink></SwiperSlide>
+        <Swiper
+            className={Style.Swiper}
+            slidesPerView={7}
+            onSlideChange={handleSlideChange}
+        >
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#MaxiBox" className={activeSlide === 0 ? Style.Active : ''}>🍟🍔🥤Maxi BOX</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Klab" className={activeSlide === 1 ? Style.Active : ''}>🥪Klab-Sendvich</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Lavash" className={activeSlide === 2 ? Style.Active : ''}>🌯Lavash</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Shaurma" className={activeSlide === 3 ? Style.Active : ''}>🌮Shaurma</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Donar" className={activeSlide === 4 ? Style.Active : ''}>🍱Donar Kebab</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Panini" className={activeSlide === 5 ? Style.Active : ''}>🫔Panini</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Burger" className={activeSlide === 6 ? Style.Active : ''}>🍔Burger</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#HotDog" className={activeSlide === 7 ? Style.Active : ''}>🌭Hot-Dog</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Gazaklar" className={activeSlide === 8 ? Style.Active : ''}>🍟Gazaklar</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Ichimlik" className={activeSlide === 9 ? Style.Active : ''}>🥤Ichimliklar</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Desertlar" className={activeSlide === 10 ? Style.Active : ''}>🍰Desertlar</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Souslar" className={activeSlide === 11 ? Style.Active : ''}>🥫Souslar</a>
+            </SwiperSlide>
+            <SwiperSlide className={Style.SwiperSlide}>
+                <a href="#Tamaddilar" className={activeSlide === 12 ? Style.Active : ''}>🍚Tamaddilar</a>
+            </SwiperSlide>
         </Swiper>
-    )
+    );
 }
 
 export default Header;

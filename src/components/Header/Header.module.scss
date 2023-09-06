@@ -8,17 +8,21 @@
 }
 .Swiper{
     display: flex;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
     .SwiperSlide{
+        display: inline;
         width: 166px;
         height: 45px;
         font-size: 1rem;
         border-radius: 0.75rem;
         text-transform: capitalize;
         transition: .15s ease;
-        &:hover{
-            animation: HeaderAnim .4s ease forwards;
-        transition: .15s ease;
-        text-transform: capitalize;
-        }
+    }
+    .Active{
+        background-color: #000;
+        color: #fff;
     }
 }

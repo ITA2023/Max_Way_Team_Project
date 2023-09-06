@@ -5,6 +5,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import Index from "./Paths/Paths";
 import { CartProvider } from "react-use-cart";
+import "./i18n"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
