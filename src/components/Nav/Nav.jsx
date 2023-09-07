@@ -25,7 +25,7 @@ const Nav = () => {
         img = "uz.svg";
     } else if (currentLang === "ru") {
         img = "ru.svg";
-    } else {
+    } else if (currentLang === "en") {
         img = "en.svg";
     }
     return (
@@ -33,14 +33,26 @@ const Nav = () => {
             <div className={Style.Nav_Container}>
                 <img src={Logo} alt="Logo" className={Style.Logo} />
                 <div className={Style.Links}>
-                    <NavLink to="/">{t("Navigation1")}</NavLink>
-                    <NavLink to="/Filials" >{t("Navigation2")}</NavLink>
-                    <NavLink to="/About" >{t("Navigation3")}</NavLink>
-                    <NavLink to="/Contact" >{t("Navigation4")}</NavLink>
+                    <NavLink to="/"
+                        style={({ isActive }) => ({
+                            fontWeight: isActive ? 500 : 400
+                        })}>{t("Navigation1")}</NavLink>
+                    <NavLink to="/Filials" 
+                        style={({ isActive }) => ({
+                            fontWeight: isActive ? 500 : 400
+                        })}>{t("Navigation2")}</NavLink>
+                    <NavLink to="/About" 
+                        style={({ isActive }) => ({
+                            fontWeight: isActive ? 500 : 400
+                        })}>{t("Navigation3")}</NavLink>
+                    <NavLink to="/Contact" 
+                        style={({ isActive }) => ({
+                            fontWeight: isActive ? 500 : 400
+                        })}>{t("Navigation4")}</NavLink>
                 </div>
                 <div className={Style.Right}>
                     <FaLocationDot className={Style.LocationDot} size={25} style={{ backgroundColor: "#f1eff4" }} />
-                    <h3>Yetkazib berish yoki Olib ketish <br /> <span>Qabul qilib olish turini tanlang </span></h3>
+                    <h3>{t("dostavka1")}<br /> <span>{t("dostavka2")}</span></h3>
                     <DropdownButton
                         variant="til"
                         className={Style.dropdown}
@@ -70,7 +82,7 @@ const Nav = () => {
                     <Link to="/cart">
                         <BiSolidCart className={Style.Cart} />
                     </Link>
-                    <h3 className={Style.CartTotal}>{cartTotal.toLocaleString()} {t("narx")}</h3>
+                    <h3 className={Style.CartTotal}><span>{cartTotal.toLocaleString()}</span><span> {t("narx")}</span></h3>
                     <FaUser className={Style.User} />
                 </div>
             </div>

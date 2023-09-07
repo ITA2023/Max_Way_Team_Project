@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Style from "./Filials.module.scss";
-import FilialsHeader from '../../components/Filials_Header/FilialsHeader';
+import FilialsHeader from '../../components/Filials_Header/FilialsHeader'; 
 const Filials = () => {
   const Api = "http://localhost:9000";
   const [filials, setFilials] = useState([]);
@@ -13,8 +13,7 @@ const Filials = () => {
     } catch (error) {
       console.error(error);
     }
-  };
-
+  }; 
   useEffect(() => {
     GetApiFunc();
   }, []);

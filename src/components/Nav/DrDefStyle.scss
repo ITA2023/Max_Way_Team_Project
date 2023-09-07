@@ -1,15 +1,13 @@
 .dropdown {
   .dropdown-menu {
-      border: none;
-      width: 250px;
-      background-color: rgb(255, 255, 255);
-      color: rgba(0, 0, 0, 0.87);
-      box-shadow: 0 0 15 .5 #eaeaea;
-      width: 232px;
-      border-radius: 12px;
-      border: none;
-      position: absolute;
-      left: 0;
+    border: none;
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.87);
+    width: 232px;
+    border-radius: 12px;
+    border: none;
+    position: absolute;
   }
   .dropdown-toggle {
     border: none;
@@ -30,6 +28,24 @@
       border-right: 0.3em solid transparent;
       border-bottom: 0;
       border-left: 0.3em solid transparent;
+    }
+  }
+}
+.dropdown-menu {
+  box-shadow: 0 0 15px 1px #eaeaea;
+  margin-top: 10px;
+  &.show {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(255, 255, 255);
+      transform: translateY(-50%) rotate(45deg);
+      z-index: 0;
     }
   }
 }

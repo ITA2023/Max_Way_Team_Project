@@ -5,19 +5,21 @@ import Style from "./Footer.module.scss";
 import { BsInstagram } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillYoutube } from "react-icons/ai";
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation()
   return (
     <footer>
       <div className={Style.Footer_Container}>
         <div className={Style.Footer_Links}>
           <img className={Style.Logo} src={Logo} alt="" />
-          <Link to={"/Filials"}>Filiallar</Link>
-          <Link to={"/About"}>Biz Haqimizda</Link>
-          <Link to={"/Contact"}>Bog`lanish</Link>
+          <Link to={"/Filials"}> {t("Navigation1")} </Link>
+          <Link to={"/About"}> {t("Navigation2")} </Link>
+          <Link to={"/Contact"}> {t("Navigation3")} </Link>
         </div>
         <div className={Style.Footer_Bottom}>
-          <p>© Delever 2020 - 2023 Barcha huquqlar himoyalangan</p>
+          <p>{t("Footer")}</p>
           <div className={Style.Links}>
             <BsInstagram size={25} fill='gray' />
             <BsFacebook size={25} fill='gray' />

@@ -2,13 +2,25 @@ import axios from 'axios';
 import Style from "./Burger.module.scss";
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Burger = () => {
   const Api = "http://localhost:9000";
   const [products, setProducts] = useState([]);
-
+  const { i18n } = useTranslation();
+  const currentLang = i18n.language;
+  let Product = "";
+  if(currentLang === "uz"){
+    Product = "/products";
+  }else if(currentLang === "ru"){
+    Product = "/products";
+  }else if(currentLang === "en"){
+    Product = "/products";
+  }else{
+    console.error("error");
+  }
   const getApiFunc = async () => {
-    await axios.get(Api + `/products/`).then((response) => {
+    await axios.get(Api + Product).then((response) => {
       setProducts(response.data);
     });
   };

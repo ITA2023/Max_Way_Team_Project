@@ -1,11 +1,13 @@
 import React from 'react';
 import AboutImg from "../../images/about.webp";
 import Style from "./About.module.scss";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const {t}= useTranslation()
   return (
     <div>
-      <h1>Kompaniya haqida</h1>
+      <h1>{t("AboutHeading")}</h1>
       <img src={AboutImg} className={Style.About_img} alt="" />
       <p>Kompaniya 2005 yilning fevral oyida Toshkent shahrida tashkil etilgan. Hozirda kompaniyaning Toshkent 
         <br /> shahrida 18 ta filiali mavjud. 
