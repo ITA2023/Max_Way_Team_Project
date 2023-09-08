@@ -23,6 +23,24 @@
   "FilialsHeading": "Filiallar",
   "FilialsTab1": "Ro'yxat",
   "FilialsTab2": "Xarita",
-  "Footer":"© Delever 2020 - 2023 Barcha huquqlar himoyalangan",
-  "AboutHeading":"Kompaniya haqida"
+  "Footer": "© Delever 2020 - 2023 Barcha huquqlar himoyalangan",
+  "AboutHeading": "Kompaniya haqida",
+  "About": [
+    "Kompaniya 2005 yilning fevral oyida Toshkent shahrida tashkil etilgan. Hozirda kompaniyaning Toshkent",
+    "shahrida 18 ta filiali mavjud.",
+    "Taomnoma asosan klаb sendvichlari, hot-doglar, burgerlar, lavashlar va donarlardan iborat. Bizning ustuvor",
+    "yo'nalishlarimiz - ingredientlarning yangiligi va sifati, qo'shimchalarning xilma-xilligi, arzon narxlar va",
+    "mehmonlarning takliflariga e'tibor.",
+    "Har kuni turli xil odamlar MaxWay-dan buyurtma berishadi. Biz esa tashrif buyuruvchilar sonini ham, filiallar",
+    "sonini ham oshirishga harakat qilmoqdamiz. Har bir tayyorlangan taom bilan biz o'ziga xos retseptlarning",
+    "tafsilotlarini aniqlaymiz va sizning sevimli brendingiz bo'lishda davom etish uchun narx va sifatning",
+    "mukammal muvozanatini qidiramiz.",
+    "Agar siz kutilmaganda biz tomondan yomon xizmat yoki past sifatli pishirilgan taomga duch kelsangiz, bizga",
+    "@maxwaymasterfood_bot manziliga murojaat qiling. Biz ijobiy va salbiy fikr-mulohazalarni mamnuniyat bilan",
+    "qabul qilamiz. Mehmonning shikoyati - bu sovg'a, bu tufayli bizda o'sish uchun maqsad bo’ladi.",
+    ""
+  ],
+  "ContactHeading": "Bog'lanish",
+  "TG": ["Telegramda sharh", "qoldiring yoki savol bering"],
+  "Contact": "Yagona aloqa markazi"
 }
