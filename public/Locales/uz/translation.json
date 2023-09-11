@@ -42,5 +42,16 @@
   ],
   "ContactHeading": "Bog'lanish",
   "TG": ["Telegramda sharh", "qoldiring yoki savol bering"],
-  "Contact": "Yagona aloqa markazi"
+  "Contact": "Yagona aloqa markazi",
+  "AddBtn": "Qo'shish",
+  "vaqt": "Ish vaqti:",
+  "telefon": "Telefon:",
+  "emptyCart": "Sizning savatingiz hozircha bo'sh",
+  "emptyCart1": "Buyurtma qilingan narsalar shu yerda paydo bo'ladi.",
+  "emptyCartBtn": "Menyuga qaytish",
+  "cart": "Savatcha",
+  "404": "Sahifa topilmadi",
+  "404.1": "Bu serverda soʻralgan resurs topilmadi.",
+  "404Btn": "Uyga qaytish",
+  "AddCart":"Xarid qilish sumkasiga qo'shing"
 }

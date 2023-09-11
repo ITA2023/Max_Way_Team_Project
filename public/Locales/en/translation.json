@@ -42,5 +42,16 @@
   ],
   "ContactHeading": "Contacts",
   "TG": ["Leave a review or", "ask a question in Telegram"],
-  "Contact": "Single call center"
+  "Contact": "Single call center",
+  "AddBtn": "Add",
+  "vaqt": "Schedule:",
+  "telefon": "Phone:",
+  "emptyCart":"Your cart is empty",
+  "emptyCart1":"The items you order will appear here.",
+  "emptyCartBtn":"Back to menu",
+  "cart":"Cart",
+  "404":"Page not found",
+  "404.1":"The resource requested could not be found in this server.",
+  "404Btn":"Go Back to Home",
+  "AddCart":"Add to shopping bag"
 }

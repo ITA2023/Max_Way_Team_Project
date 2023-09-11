@@ -2,9 +2,12 @@ import axios from 'axios';
 import Style from "./Tamadilar.module.scss";
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Tamadilar = () => {
   const Api = "http://localhost:9000";
+  const {t,i18n} = useTranslation()
+  const currentLang = i18n.language
   const [products, setProducts] = useState([])
   const GetApiFunc = async () => {
     await axios.get(Api + `/products`)
@@ -18,16 +21,30 @@ const Tamadilar = () => {
     <div className={Style.Cards}>
       {
         products.slice(50, 52).map(product => {
+          let title;
+          let description;
+          if(currentLang === "uz"){
+            title = product.title1
+            description = product.description1
+          }else if(currentLang === "ru"){
+            title = product.title2
+            description = product.description2
+          } else if(currentLang === "en"){
+            title = product.title3
+            description = product.description3
+          }else{
+            console.error("error");
+          }
           return (
             <div className={Style.Card} key={product.id}>
               <img src={process.env.PUBLIC_URL + "/images/" + product.img} alt="" />
               <div className={Style.Prop}>
-                <h2 className={Style.Title}> {product.title} </h2>
-                <p className={Style.Desc}> {product.description} </p>
+                <h2 className={Style.Title}> {title} </h2>
+                <p className={Style.Desc}> {description.substr(0,53)} </p>
                 <div className={Style.Bottom}>
-                  <h1 className={Style.Price}> {product.price.toLocaleString()} <span>so'm</span></h1>
+                  <h1 className={Style.Price}> {product.price.toLocaleString()} <span>{t("narx")}</span></h1>
                   <Link to={`/single-product/${product.id}`}>
-                    <button className={Style.Add}>Qo'shish </button>
+                    <button className={Style.Add}>{t("AddBtn")}</button>
                   </Link>
                 </div>
               </div>

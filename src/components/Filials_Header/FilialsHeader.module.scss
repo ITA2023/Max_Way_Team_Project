@@ -31,11 +31,11 @@
         align-items: center;
         justify-content: center;
         font-weight: 500;
-        &:nth-of-type(1n) {
+        &.CurrentPage1{
           background-color: #51267d;
           color: #fff;
         }
-        &:nth-of-type(2n) {
+        &.CurrentPage2{
           background-color: #f1eff4;
           color: #48535b;
         }

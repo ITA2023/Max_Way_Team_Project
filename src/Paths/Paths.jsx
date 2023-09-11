@@ -11,6 +11,7 @@ import Cart from '../Pages/Cart/Cart';
 import Style from "./Paths.module.scss";
 import Map from '../Pages/Map/Map';
 import SProduct from '../Pages/SProduct/SProduct';
+import Loader from '../components/Loader/Loader';
 
 export const Paths = [
     {
@@ -58,6 +59,7 @@ export const Paths = [
 const Index = () => {
     return (
         <React.Fragment>
+            <Loader />
             <Nav />
             <div className={Style.Routes}>
                 <Routes>
