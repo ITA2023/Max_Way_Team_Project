@@ -7,10 +7,10 @@ import { useTranslation } from 'react-i18next';
 const MaxiBox = () => {
   const { t, i18n } = useTranslation()
   const currentLang = i18n.language
-  const Api = "http://localhost:9000";
+  const Api = "https://ita2023.github.io/Max_Way_Api";
   const [products, setProducts] = useState([])
   const GetApiFunc = async () => {
-    await axios.get(Api + `/products`)
+    await axios.get(Api + `/products.json`)
       .then(response =>
         setProducts(response.data))
   }
@@ -21,33 +21,17 @@ const MaxiBox = () => {
     <div className={Style.Cards}>
       {
         products.slice(0, 6).map(product => {
-                    let title;
+          let title;
           let description;
-          let className = ""
           if (currentLang === "uz") {
             title = product.title1
             description = product.description1
-            if (description === undefined) {
-              className = Style.DescUndefined
-            } else {
-              description = product.description1
-            }
           } else if (currentLang === "ru") {
             title = product.title2
             description = product.description2
-            if (description === undefined) {
-              className = Style.DescUndefined
-            } else {
-              description = product.description2
-            }
           } else if (currentLang === "en") {
             title = product.title3
             description = product.description3
-            if (description === undefined) {
-              className = Style.DescUndefined
-            } else {
-              description = product.description3
-            }
           } else {
             console.error("error");
           }
@@ -56,7 +40,7 @@ const MaxiBox = () => {
               <img src={process.env.PUBLIC_URL + "/images/" + product.img} alt="" />
               <div className={Style.Prop}>
                 <h2 className={Style.Title}> {title} </h2>
-                <p className={Style.Desc && className}> {description.substr(0, 53)}... </p>
+                <p className={Style.Desc}> {description.substr(0, 53)}... </p>
                 <div className={Style.Bottom}>
                   <h1 className={Style.Price}> {product.price.toLocaleString().toLocaleString()} <span> {t("narx")} </span></h1>
                   <Link to={`/single-product/${product.id}`}>
