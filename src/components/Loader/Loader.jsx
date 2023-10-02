@@ -23,7 +23,7 @@ const Loader = () => {
             <TopLoadingBar
                 progress={progress}
                 color="#51267d"
-                height={3}
+                height={5}
             />
         </div>
     );

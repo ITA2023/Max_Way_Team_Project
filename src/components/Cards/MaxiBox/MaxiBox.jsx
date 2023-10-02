@@ -7,10 +7,10 @@ import { useTranslation } from 'react-i18next';
 const MaxiBox = () => {
   const { t, i18n } = useTranslation()
   const currentLang = i18n.language
-  const Api = "https://ita2023.github.io/Max_Way_Api";
+  const Api = "http://localhost:9000";
   const [products, setProducts] = useState([])
   const GetApiFunc = async () => {
-    await axios.get(Api + `/products.json`)
+    await axios.get(Api + `/products`)
       .then(response =>
         setProducts(response.data))
   }

@@ -25,7 +25,7 @@ const Nav = () => {
     } else if (currentLang === "ru") {
         img = "ru.svg";
     } else if (currentLang === "en") {
-        img = "en.svg";
+        img = "en.svg"; 
     }
     return (
         <React.Fragment>

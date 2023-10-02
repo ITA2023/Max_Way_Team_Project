@@ -53,5 +53,10 @@
   "404": "Sahifa topilmadi",
   "404.1": "Bu serverda soʻralgan resurs topilmadi.",
   "404Btn": "Uyga qaytish",
-  "AddCart":"Xarid qilish sumkasiga qo'shing"
+  "AddCart":"Xarid qilish sumkasiga qo'shing",
+  "CartTotal":"Umumiy",
+  "CartItems":"Mahsulotlar",
+  "Delivery":"Yetkazib berish",
+  "Checkout":"To'lash uchun",
+  "BackToCheckout":"To'lov sahifasiga o'tish"
 }
